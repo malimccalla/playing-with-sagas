@@ -14,7 +14,7 @@ export function* watchIncrementAsync() {
   console.log('WATCH INCREMENT');
   yield takeEvery('INCREMENT_ASYNC', incrementAsync);
 
-  // takeLatest will only yield the latest request
+  // takeLatest will only yield the latest request with all previous ones getting cancelled
   // yield takeLatest('INCREMENT_ASYNC', incrementAsync);
 }
 
